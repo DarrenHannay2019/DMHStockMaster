@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMHStockMasterV5", "DMHStockMasterV5\DMHStockMasterV5.csproj", "{313C344C-1B06-4A65-A353-C51FC8F80D43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{313C344C-1B06-4A65-A353-C51FC8F80D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{313C344C-1B06-4A65-A353-C51FC8F80D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{313C344C-1B06-4A65-A353-C51FC8F80D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{313C344C-1B06-4A65-A353-C51FC8F80D43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6038C82E-C369-420B-83D5-1086ACB72F9B}
+	EndGlobalSection
+EndGlobal
