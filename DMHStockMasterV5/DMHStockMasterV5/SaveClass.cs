@@ -82,7 +82,7 @@ namespace DMHStockMasterV5
                 conn.Close();
             }
         }
-        public bool SaveWarehouse(string WarehouseRef, string WarehouseName, string Address1, string Address2, string Address3, string Address4, string PostCode, string ContactName, string Telephone, string Telephone2, string Fax, string eMail, string Memo, string WarehouseType)
+        public bool SaveWarehouse(string WarehouseRef, string WarehouseName, string Address1, string Address2, string Address3, string Address4, string PostCode, string ContactName, string Telephone, string Telephone2, string Fax, string eMail, string Memo, bool WarehouseType)
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
@@ -125,7 +125,7 @@ namespace DMHStockMasterV5
             }
             return SaveToDB;
         }
-        public bool SaveShop(string ShopRef, string ShopName, string Address1, string Address2, string Address3, string Address4, string PostCode, string ContactName, string Telephone, string Telephone2, string Fax, string eMail, string Memo, string ShopType, bool VATPayable)
+        public bool SaveShop(string ShopRef, string ShopName, string Address1, string Address2, string Address3, string Address4, string PostCode, string ContactName, string Telephone, string Telephone2, string Fax, string eMail, string Memo, bool ShopType, bool VATPayable)
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
@@ -299,7 +299,7 @@ namespace DMHStockMasterV5
             }
             return SaveToDB;
         }
-        public bool SaveWHAdjustment()
+        public bool SaveWHAdjustment(string WarehouseRef,string Reference,int TotalLossItems,int TotalGainItems,DateTime MovementDate)
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
@@ -313,6 +313,7 @@ namespace DMHStockMasterV5
                         CommandType = CommandType.Text,
                         Connection = sqlConnection
                     };
+					sqlCommand.Parameters.AddWithValue("@WarehouseRef", WarehouseRef);
 
                     sqlCommand.Parameters.AddWithValue("@CreatedBy", username);
                     sqlCommand.Parameters.AddWithValue("@CreatedDate", DateTime.Now);
