@@ -368,7 +368,7 @@ namespace DMHStockMasterV5
                 {
                     SqlCommand sqlCommand = new SqlCommand
                     {
-                        CommandText = "INSERT INTO tblShopDeliveries(ShopRef,ShopName,WarehouseRef,WarehouseName,Reference,TotalItems,DeliveryDate,DeliveryType,ConfirmedDate,Notes,CreatedBy,CreatedDate) VALUES (@ShopRef,@ShopName,@WarehouseRef,@WarehouseName,@Reference,@TotalItems,@DeliveryDate,@DeliveryType,@ConfirmedDate,@Notes,@CreatedBy,@CreatedDate)",
+                        CommandText = "INSERT INTO tblShopDeliveries(ShopRef,WarehouseRef,Reference,TotalItems,DeliveryDate,Notes,CreatedBy,CreatedDate) VALUES (@ShopRef,@WarehouseRef,@Reference,@TotalItems,@DeliveryDate,@Notes,@CreatedBy,@CreatedDate)",
                         CommandType = CommandType.Text,
                         Connection = sqlConnection
                     };
@@ -398,7 +398,7 @@ namespace DMHStockMasterV5
                 {
                     SqlCommand sqlCommand = new SqlCommand
                     {
-                        CommandText = "INSERT INTO tblShopDeliveriesLines (SDeliveriesID,SStockCode,DeliveredQty) VALUES (@SDeliveriesID,@SStockCode,@DeliveredQty)",
+                        CommandText = "INSERT INTO tblShopDeliveriesLines (DeliveriesID,StockCode,DeliveredQty) VALUES (@DeliveriesID,@StockCode,@DeliveredQty)",
                         CommandType = CommandType.Text,
                         Connection = sqlConnection
                     };
