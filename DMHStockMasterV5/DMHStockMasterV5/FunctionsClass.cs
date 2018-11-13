@@ -32,7 +32,7 @@ namespace DMHStockMasterV5
                     Connection = sqlConnection
                 };
                 sqlConnection.Open();
-                sqlCommand.Parameters.AddWithValue("@WarehouseRef", SupplierRef);
+                sqlCommand.Parameters.AddWithValue("@SupplierRef", SupplierRef);
                 return (string)sqlCommand.ExecuteScalar();
             }
         }
