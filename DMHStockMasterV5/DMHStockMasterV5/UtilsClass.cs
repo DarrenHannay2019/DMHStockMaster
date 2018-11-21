@@ -2,9 +2,9 @@
 
 namespace DMHStockMasterV5
 {
-    class UtilsClass
+    public class UtilsClass
     {
-        public string GetConnString()
+        protected string GetConnString()
         {
            return @"Initial Catalog=DMHStockv4;Data Source=.\\SQLEXPRESS;Persist Security Info=false;Integrated Security=true;";
         }
