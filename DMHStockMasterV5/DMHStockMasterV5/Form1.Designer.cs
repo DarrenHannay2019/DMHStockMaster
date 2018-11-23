@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.movementTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AllReportsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,25 +58,8 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // movementTypesToolStripMenuItem
-            // 
-            this.movementTypesToolStripMenuItem.Name = "movementTypesToolStripMenuItem";
-            this.movementTypesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.movementTypesToolStripMenuItem.Text = "Movement Types";
-            this.movementTypesToolStripMenuItem.Click += new System.EventHandler(this.movementTypesToolStripMenuItem_Click);
-            // 
-            // AllReportsMenuItem
-            // 
-            this.AllReportsMenuItem.Name = "AllReportsMenuItem";
-            this.AllReportsMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.AllReportsMenuItem.Text = "All Reports";
-            this.AllReportsMenuItem.Click += new System.EventHandler(this.AllReportsMenuItem_Click);
-            // 
             // reportsToolStripMenuItem
             // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AllReportsMenuItem,
-            this.movementTypesToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.reportsToolStripMenuItem.Text = "Reports";
@@ -233,8 +214,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem movementTypesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem AllReportsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesToolStripMenuItem;
