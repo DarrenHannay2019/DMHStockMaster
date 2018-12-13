@@ -4,21 +4,26 @@ using System.Data.SqlClient;
 
 namespace DMHStockMasterV5
 {
-    class SaveClass
-    {
-        UtilsClass utilities = new UtilsClass();
+    class SaveClass : UtilsClass
+    {      
         private int ID;
         private bool SaveToDB;
         private string username;
         public SaveClass()
         {
-            username = utilities.Username();
+            username = Username();
+            SaveToDB = false;
+        }
+        ~SaveClass()
+        {
+            SaveToDB = false;
+            username = null;
         }
         public bool SaveStockMovements(string StockCode, string SupplierRef, string LocationRef, int LocationType, int MovementType, int MovementQtyHangers, DateTime MovementDate, decimal MovementValue, string Reference, int TransferReference)
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -57,7 +62,7 @@ namespace DMHStockMasterV5
         public void SaveToSystemLog(string stockcode, string supplierref, string location, int qty, string movementtype, string recordtype, DateTime mdate, string reference)
         {
             // Tested Date: ??/??/2018
-            using (SqlConnection conn = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection conn = new SqlConnection(GetConnString()))
             {
                 SqlCommand ICmd = new SqlCommand
                 {
@@ -86,7 +91,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -129,7 +134,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -173,7 +178,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -210,11 +215,11 @@ namespace DMHStockMasterV5
             }
             return SaveToDB;
         }
-        public bool SaveStockCode()
+        public bool SaveStockCode(string StockCode, string SupplierRef, bool DeadCode, decimal AmountTaken, decimal CostValue, int DelQtyH, decimal PCMarkUp)
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -244,7 +249,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -274,7 +279,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -303,7 +308,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -314,7 +319,10 @@ namespace DMHStockMasterV5
                         Connection = sqlConnection
                     };
 					sqlCommand.Parameters.AddWithValue("@WarehouseRef", WarehouseRef);
-
+                    sqlCommand.Parameters.AddWithValue("@Reference", Reference);
+                    sqlCommand.Parameters.AddWithValue("@TotalLossItems", TotalLossItems);
+                    sqlCommand.Parameters.AddWithValue("@TotalGainItems", TotalGainItems);
+                    sqlCommand.Parameters.AddWithValue("@MovementDate", MovementDate);
                     sqlCommand.Parameters.AddWithValue("@CreatedBy", username);
                     sqlCommand.Parameters.AddWithValue("@CreatedDate", DateTime.Now);
                     sqlConnection.Open();
@@ -330,11 +338,11 @@ namespace DMHStockMasterV5
             }
             return SaveToDB;
         }
-        public bool SaveWHAdjustmentLines()
+        public bool SaveWHAdjustmentLines(int WHAdjustID,string StockCode,string MovementType,int Qty,decimal Values)
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -344,8 +352,11 @@ namespace DMHStockMasterV5
                         CommandType = CommandType.Text,
                         Connection = sqlConnection
                     };
-
-
+                    sqlCommand.Parameters.AddWithValue("@WarehouseAdjustID", WHAdjustID);
+                    sqlCommand.Parameters.AddWithValue("@StockCode", StockCode);
+                    sqlCommand.Parameters.AddWithValue("@MovementType", MovementType);
+                    sqlCommand.Parameters.AddWithValue("@Qty", Qty);
+                    sqlCommand.Parameters.AddWithValue("@Value", Values);
                     sqlConnection.Open();
                     sqlCommand.ExecuteNonQuery();
                     SaveToDB = true;
@@ -363,7 +374,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -393,7 +404,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -421,7 +432,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -451,7 +462,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -479,7 +490,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -509,7 +520,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -537,7 +548,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -567,7 +578,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -597,7 +608,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -627,7 +638,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
@@ -657,7 +668,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 try
                 {
