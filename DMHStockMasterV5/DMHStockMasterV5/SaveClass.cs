@@ -4,21 +4,20 @@ using System.Data.SqlClient;
 
 namespace DMHStockMasterV5
 {
-    class SaveClass
-    {
-        UtilsClass utilities = new UtilsClass();
+    class SaveClass : UtilsClass
+    {    
         private int ID;
         private bool SaveToDB;
         private string username;
         public SaveClass()
-        {
-            username = utilities.Username();
+        {            
+            username = Username();
         }
         public bool SaveStockMovements(string StockCode, string SupplierRef, string LocationRef, int LocationType, int MovementType, int MovementQtyHangers, DateTime MovementDate, decimal MovementValue, string Reference, int TransferReference)
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -57,7 +56,7 @@ namespace DMHStockMasterV5
         public void SaveToSystemLog(string stockcode, string supplierref, string location, int qty, string movementtype, string recordtype, DateTime mdate, string reference)
         {
             // Tested Date: ??/??/2018
-            using (SqlConnection conn = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection conn = new SqlConnection(GetConnString(0)))
             {
                 SqlCommand ICmd = new SqlCommand
                 {
@@ -86,7 +85,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -129,7 +128,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -173,7 +172,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -214,7 +213,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -244,7 +243,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -274,7 +273,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -303,7 +302,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -334,7 +333,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -363,7 +362,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -393,7 +392,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -421,7 +420,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -451,7 +450,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -479,7 +478,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -509,7 +508,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -537,7 +536,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -567,7 +566,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -597,7 +596,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -627,7 +626,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -657,7 +656,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             SaveToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {

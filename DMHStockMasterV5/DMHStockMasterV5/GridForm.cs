@@ -16,5 +16,54 @@ namespace DMHStockMasterV5
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void CloseToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NewToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecordToolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RefreshToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrintToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FindToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StockLevelToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FunctionCheckToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void LoadData(string FunctionName)
+        {
+
+        }
+    }
 }

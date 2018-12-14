@@ -8,7 +8,7 @@ namespace DMHStockMasterV5
        // private UtilsClass utilsClass = new UtilsClass();   // Get the connection string for the Data transactions
         public string GetLocationName(string RecordName,string SqlCmd)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 SqlCommand sqlCommand = new SqlCommand
                 {
@@ -23,7 +23,7 @@ namespace DMHStockMasterV5
         }
         public string GetSupplierName(string SupplierRef)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 SqlCommand sqlCommand = new SqlCommand
                 {
@@ -38,7 +38,7 @@ namespace DMHStockMasterV5
         }
         public int GetStockQty(string StockCode, string LocationRef)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 SqlCommand sqlCommand = new SqlCommand
                 {
@@ -54,7 +54,7 @@ namespace DMHStockMasterV5
         }
         public int CheckStockCode(string StockCode)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 SqlCommand sqlCommand = new SqlCommand
                 {
@@ -69,7 +69,7 @@ namespace DMHStockMasterV5
         }
         public int GetLastID(string sqlCmd)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 SqlCommand sqlCommand = new SqlCommand
                 {

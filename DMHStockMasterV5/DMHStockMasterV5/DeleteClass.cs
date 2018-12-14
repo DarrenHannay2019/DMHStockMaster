@@ -3,15 +3,15 @@ using System.Data.SqlClient;
 
 namespace DMHStockMasterV5
 {
-    class DeleteClass
+    class DeleteClass:UtilsClass
     {
         private bool DeleteFromDB;
-        UtilsClass utilities = new UtilsClass();
+      
         public bool DeleteStockMovements()
         {
             // Tested Date: ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 try
                 {
@@ -41,7 +41,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -71,7 +71,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -101,7 +101,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -131,7 +131,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -161,7 +161,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -191,7 +191,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -221,7 +221,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -251,7 +251,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -281,7 +281,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -311,7 +311,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -341,7 +341,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -371,7 +371,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -401,7 +401,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -431,7 +431,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -461,7 +461,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -491,7 +491,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -521,7 +521,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -551,7 +551,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -581,7 +581,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             DeleteFromDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(utilities.GetConnString()))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
             {
                 DeleteFromDB = false;
                 try
@@ -608,5 +608,4 @@ namespace DMHStockMasterV5
             return DeleteFromDB;
         }
     }
-}
 }

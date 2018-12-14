@@ -10,62 +10,71 @@ namespace DMHStockMasterV5
             InitializeComponent();
         }
 
-        private void warehousesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void WarehousesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GridForm objForm = new GridForm
+            {
+                MdiParent = this
+            };
+            objForm.LoadData("Warehouses");
+            
+            splitContainer1.Panel2.Controls.Add(objForm);
+            objForm.Dock = DockStyle.Fill;
+            objForm.Show();
+            objForm.BringToFront();
+        }
+
+        private void ShopsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void shopsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SuppliersToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void suppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void ordersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StockToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        private void WHAdjustToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void wHAdjustToolStripMenuItem_Click(object sender, EventArgs e)
+        private void WHTransfersToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void wHTransfersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeliveriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void deliveriesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShopAdjustToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void shopAdjustToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShopTransfersToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void shopTransfersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void salesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void returnsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ReturnsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -75,17 +84,17 @@ namespace DMHStockMasterV5
 
         }
 
-        private void movementTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MovementTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();     // Exit the application
         }
