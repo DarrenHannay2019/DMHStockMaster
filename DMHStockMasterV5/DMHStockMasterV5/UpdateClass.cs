@@ -3,15 +3,14 @@ using System.Data.SqlClient;
 
 namespace DMHStockMasterV5
 {
-    class UpdateClass:UtilsClass
-    {
-        UtilsClass utilities = new UtilsClass();
+    class UpdateClass : UtilsClass
+    {       
         private bool UpdateToDB;
         public bool UpdateWarehouse(string WarehouseRef, string WarehouseName, string Address1, string Address2, string Address3, string Address4, string PostCode, string ContactName, string Telephone, string Telephone2, string Fax, string eMail, string Memo, string WarehouseType)
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -53,7 +52,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -96,7 +95,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -136,7 +135,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -166,7 +165,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -196,7 +195,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -226,7 +225,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -256,7 +255,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -286,7 +285,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -316,7 +315,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -346,7 +345,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -376,7 +375,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -406,7 +405,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -436,7 +435,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -466,7 +465,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -496,7 +495,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -526,7 +525,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -556,7 +555,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
@@ -586,7 +585,7 @@ namespace DMHStockMasterV5
         {
             // Tested Date : ??/??/2018
             UpdateToDB = false;
-            using (SqlConnection sqlConnection = new SqlConnection(GetConnString(0)))
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnString()))
             {
                 UpdateToDB = false;
                 try
